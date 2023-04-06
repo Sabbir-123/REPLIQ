@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import swal from "sweetalert";
 import { AuthContext } from "../../Contexts/AuthProvider";
 
-
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
 
@@ -15,26 +14,26 @@ const Navbar = () => {
 
   const menuItems = (
     <>
-      <li>
+      <li className="hover:underline">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="hover:underline">
         <Link to="/blogs">Blogs</Link>
       </li>
-      <li>
+      <li className="hover:underline ">
         <Link to="/about">About</Link>
       </li>
       {user?.uid ? (
         <>
-          <li>
+          <li className="hover:underline ">
             <Link to="/dashboard">Dashboard</Link>
           </li>
-          <li>
+          <li className="hover:underline ">
             <button onClick={handleLogout}>Sign out</button>
           </li>
         </>
       ) : (
-        <li>
+        <li className="hover:underline ">
           <Link to="/login">Login</Link>
         </li>
       )}
@@ -42,7 +41,9 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 flex justify-between">
+    
+   <div>
+     <div className="navbar purple textColor flex justify-between">
     <div className="navbar-start">
       <div className="dropdown">
         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -63,7 +64,7 @@ const Navbar = () => {
         </label>
         <ul
           tabIndex={1}
-          className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+          className="menu menu-compact dropdown-content purple mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
           {menuItems}
         </ul>
@@ -72,9 +73,10 @@ const Navbar = () => {
       Shopaholic Haven
       </Link>
     </div>
-    <div className="navbar-center hidden lg:flex">
-      <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+    <div className="navbar-center hidden mr-auto pr-96 lg:flex">
+      <ul className="menu menu-horizontal  p-0 pr-1 md:pr-2 lg:pr-28 ">{menuItems}</ul>
     </div>
+    
     <label
       htmlFor="dashboard"
       tabIndex={2}
@@ -96,6 +98,8 @@ const Navbar = () => {
       </svg>
     </label>
   </div>
+  
+   </div>
   );
 };
 
