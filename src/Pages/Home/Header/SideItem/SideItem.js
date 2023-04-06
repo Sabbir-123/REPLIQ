@@ -1,10 +1,21 @@
 import React from 'react';
-
+import img2 from '../../../../Assets/Home/img2.png'
+import Mock from '../../../../Assets/Home/Mock.mp4'
 const SideItem = () => {
     return (
-        <div>
-            
+        <div className="pt-5 mx-4 hidden lg:block ">
+      <div class="grid grid-rows-3 grid-flow-col gap-6">
+        <div class="col-span-2 ...">
+        <video controls autoPlay width="1040" height="460">
+        <source src={Mock} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
         </div>
+        <div class="row-span-2 col-span-2">
+          <img src={img2} alt="" />
+        </div>
+      </div>
+    </div>
     );
 };
 
