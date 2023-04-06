@@ -1,5 +1,4 @@
 import React from 'react';
-import img2 from '../../../../Assets/Home/img2.png'
 import Mock from '../../../../Assets/Home/Mock.mp4'
 const SideItem = () => {
     return (
@@ -12,7 +11,7 @@ const SideItem = () => {
       </video>
         </div>
         <div class="row-span-2 col-span-2">
-          <img src={img2} alt="" />
+          <img src={'https://i.ibb.co/q0b1kz4/img2.png'} alt="" />
         </div>
       </div>
     </div>

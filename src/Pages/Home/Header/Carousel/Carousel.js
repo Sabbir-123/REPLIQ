@@ -1,25 +1,23 @@
 import React from 'react';
-import img1 from '../../../../Assets/Home/img1.png'
-import img5 from '../../../../Assets/Home/img5.png'
-import img4 from '../../../../Assets/Home/img4.png'
 import CarouselItem from './CarouselItem';
+
 const Carousel = () => {
     const sliderImage = [
         {
-            image: img1,
+            image: "https://i.ibb.co/Czhdx1t/img1.png",
             prev: 1,
             id: 2,
             next: 3
         },
         {
-            image: img5,
+            image: "https://i.ibb.co/YpR5xMT/img5.png",
             prev: 3,
             id: 1,
             next: 2
         },
         
         {
-            image: img4,
+            image: "https://i.ibb.co/WWSwnyL/img4.png",
             prev: 2,
             id: 3,
             next: 1
